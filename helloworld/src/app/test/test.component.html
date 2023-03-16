@@ -1,0 +1,97 @@
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+      <img src="https://primefaces.org/cdn/primeng/images/primeng.svg" height="40" class="mr-2">
+  </ng-template>
+  <ng-template pTemplate="end">
+      <input type="text" pInputText placeholder="Search">
+  </ng-template>
+</p-menubar>
+
+
+
+<h2>{{date | date:'full'}}</h2>
+
+<!-- <h2>{{date | date:'medium'}} m3a wa9t</h2> -->
+<h4>{{250 | currency:'TND'}}</h4>
+<!-- currency = 3omlaa flous par defaut ya9rha bil dollor -->
+<h5>{{'salma wkan tjini forsa bach nnt9m mink nzwii zabourmk 9a7ba ' | uppercase}}</h5>
+
+<h1 style="text-align: center;">Welcame test</h1>
+
+
+<button class="home" routerLink="/home">Home</button>
+
+
+
+<h1>{{name}}</h1>
+
+
+<h2>Hello {{name1}}</h2>
+
+<h3>{{getStatus()}}</h3>
+
+<button (click)="save()">Envoyer</button>
+
+
+<ul *ngFor="let n of list">
+    <li>{{n}}</li>
+   
+</ul>
+
+
+<div *ngIf="condition">
+    <h1>ahla bilel !!!</h1>
+</div>
+
+<div>
+    <input type="text" class="form-control" [(ngModel)]="msg"><b>{{msg}}</b> 
+
+</div>
+
+
+<div>
+    <div [ngSwitch]="name">
+       
+        <h3 *ngSwitchCase="'bilel'"> bilel  </h3>
+        <h3 *ngSwitchCase="'salma'"> salma  </h3>
+        <h3 *ngSwitchCase="'fgd'"> fgd  </h3>
+
+    </div>
+</div>
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <p-button label="Emails" badge="4"></p-button>
+  <p-button label="Messages" icon="pi pi-users" styleClass="p-button-warning" badge="5" badgeClass="p-badge-danger"></p-button>
+ 
+  <p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
